@@ -10,7 +10,6 @@ public class Main {
             System.out.println("Вводи строку");
             System.out.println( "Результат: " + calc(scan.nextLine()));
         }
-
     }
 
     public static String calc(String input) throws Exception{
@@ -19,6 +18,5 @@ public class Main {
             return Converter.convertToRom(calc.calculate());
         }
         else return calc.calculate() + "";
-
     }
 }
