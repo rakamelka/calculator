@@ -4,7 +4,7 @@ class Calculator {
     int number1;
     int number2;
     char sign;
-    boolean isRoman = false;
+    boolean isRoman;
 
     Calculator(String task) throws Exception {
         String[] numbers = task.toUpperCase().split("[+-/*]");
@@ -33,7 +33,6 @@ class Calculator {
                 }
         }
         sign = task.charAt(numbers[0].length());
-
     }
 
     public int calculate() {
