@@ -1,19 +1,7 @@
 package calculator;
 
 class Converter {
-
-    public static int convertToNum (String number){
-        int result;
-        try{
-            result = Integer.parseInt(number);
-        }
-        catch(NumberFormatException e){
-            RomanNumbers num = RomanNumbers.valueOf(number);
-            result = num.getNumber();
-        }
-        return result;
-    }
-
+    
     public static String convertToRom(int num) throws Exception{
         String result;
 
