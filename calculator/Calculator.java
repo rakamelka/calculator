@@ -7,7 +7,7 @@ class Calculator {
     boolean isRoman;
 
     Calculator(String task) throws Exception {
-        String[] numbers = task.toUpperCase().split("[+-/*]");
+        String[] numbers = task.toUpperCase().replaceAll(" ", "").split("[+-/*]");
         if (numbers.length > 2){
             throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор");
         }
@@ -16,14 +16,14 @@ class Calculator {
         }
 
         try{
-            number1 = Integer.parseInt(numbers[0].trim());
-            number2 = Integer.parseInt(numbers[1].trim());
+            number1 = Integer.parseInt(numbers[0]);
+            number2 = Integer.parseInt(numbers[1]);
             isRoman = false;
         }
         catch (NumberFormatException e){
                 try{
-                    RomanNumbers num1 = RomanNumbers.valueOf(numbers[0].trim());
-                    RomanNumbers num2 = RomanNumbers.valueOf(numbers[1].trim());
+                    RomanNumbers num1 = RomanNumbers.valueOf(numbers[0]);
+                    RomanNumbers num2 = RomanNumbers.valueOf(numbers[1]);
                     number1 = num1.getNumber();
                     number2 = num2.getNumber();
                     isRoman = true;
