@@ -22,8 +22,8 @@ class Calculator {
         }
         catch (NumberFormatException e){
                 try{
-                    RomanNumbers num1 = RomanNumbers.valueOf(numbers[0]);
-                    RomanNumbers num2 = RomanNumbers.valueOf(numbers[1]);
+                    RomanNumbers num1 = RomanNumbers.valueOf(numbers[0].trim());
+                    RomanNumbers num2 = RomanNumbers.valueOf(numbers[1].trim());
                     number1 = num1.getNumber();
                     number2 = num2.getNumber();
                     isRoman = true;
