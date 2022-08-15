@@ -16,8 +16,8 @@ class Calculator {
         }
 
         try{
-            number1 = Integer.parseInt(numbers[0]);
-            number2 = Integer.parseInt(numbers[1]);
+            number1 = Integer.parseInt(numbers[0].trim());
+            number2 = Integer.parseInt(numbers[1].trim());
             isRoman = false;
         }
         catch (NumberFormatException e){
